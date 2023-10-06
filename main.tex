@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage{todonotes}
+
+\title{Generic Clock Cycle Simulator}
+\author{Emil Njor \& Peter Jensen}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+In the up and coming field of embedded machine learning, it is hard to manually design machine learning models that are both accurate and efficient.
+One possible solution to this problem is to make a computer search for such machine learning models.
+A computer will be much faster at exploring different machine learning models than a human engineer and can be used by people that are not experts in machine learning.
+This is known in the research community as hardware-aware neural architecture search (HW-NAS) and is a subfield of AutoML.
+
+Most works in HW-NAS search for machine learning models that are accurate and have a low amount of floating-point operations (FLOPs).
+Using the metric of floating-point operations as a proxy for efficiency has however been heavily criticized in the community.
+\todo{Emil: I can put some citations before we publish the project description.}
+The main criticism is that the number of floating-point operations will often not be a good proxy for the efficiency metrics that are important in embedded systems such as inference time, memory usage, and energy consumption.
+Inference time is a measure of how long it takes to run a trained machine learning model on a given hardware platform.
+
+In this project, we aim to develop a simulator that can be used to estimate the amount of clock cycles executing a machine learning model on given hardware platform will take.
+The output of such a simulator, i.e., a clock cycle metric, is a better proxy for inference time, and energy consumption than the number of floating-point operations.
+E.g., an estimate of the inference time of a machine learning model on a given hardware platform can be calculated by multiplying the number of clock cycles with the clock speed of the hardware platform.
+The energy consumption can also be estimated based on the size of the hardware platform and the power consumption per clock cycle.
+
+We expect that the developed simulator will work both for scalar processors and different hardware accelerators for machine learning.
+Depending on the quality of the project, we may be interested in using the simulator in an academic publication and potentially publishing the simulator as an open-source project to help other researchers.
+
+
+
+
+\end{document}
