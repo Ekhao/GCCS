@@ -16,7 +16,6 @@ This is known in the research community as hardware-aware neural architecture se
 
 Most works in HW-NAS search for machine learning models that are accurate and have a low amount of floating-point operations (FLOPs).
 Using the metric of floating-point operations as a proxy for efficiency has however been heavily criticized in the community.
-\todo{Emil: I can put some citations before we publish the project description.}
 The main criticism is that the number of floating-point operations will often not be a good proxy for the efficiency metrics that are important in embedded systems such as inference time, memory usage, and energy consumption.
 Inference time is a measure of how long it takes to run a trained machine learning model on a given hardware platform.
 
@@ -26,6 +25,7 @@ E.g., an estimate of the inference time of a machine learning model on a given h
 The energy consumption can also be estimated based on the size of the hardware platform and the power consumption per clock cycle.
 
 We expect that the developed simulator will work both for scalar processors and different hardware accelerators for machine learning.
+The simulator should be parametric such that it can support typical hardware accelerator configurations, such as VLIW (Very Long Instruction Word) and SIMD (Single Instruction/Multiple Data) architectures.
 Depending on the quality of the project, we may be interested in using the simulator in an academic publication and potentially publishing the simulator as an open-source project to help other researchers.
 
 
